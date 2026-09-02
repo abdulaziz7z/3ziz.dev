@@ -20,9 +20,9 @@
     --line:#d7f0f4;
     --shadow: 0 30px 60px -25px rgba(15,166,194,.35);
   }
- 
+
   *{box-sizing:border-box;}
- 
+
   body{
     margin:0;
     min-height:100vh;
@@ -33,20 +33,20 @@
       linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
     color:var(--ink);
   }
- 
+
   .wrap{ max-width:1040px; margin:0 auto; padding:48px 20px 40px; }
- 
+
   .page{
     display:flex;
     justify-content:center;
   }
- 
+
   .bio-section{ margin-top:80px; }
   .bio-section .intro{ padding:0; text-align:center; max-width:640px; margin:0 auto; }
   .bio-section .intro p{ margin-inline:auto; }
   .bio-section .intro-links{ justify-content:center; }
   .bio-section .interests{ margin-top:48px; }
- 
+
   /* -------- left intro column -------- */
   .intro{ padding-inline-start:8px; }
   .kicker{
@@ -57,7 +57,7 @@
   }
   .kicker span.dot{
     width:7px;height:7px;border-radius:50%;
-    background:var(--cyan); box-shadow:0 0 0 4px rgba(28, 181, 204, 0.18);
+    background:var(--cyan); box-shadow:0 0 0 4px rgba(34,195,221,.18);
   }
   .intro h1{
     font-family:'Outfit',sans-serif;
@@ -84,7 +84,7 @@
   .btn-solid:hover{ transform:translateY(-2px); }
   .btn-ghost{ color:var(--ink); background:#fff; border:1px solid var(--line); }
   .btn-ghost:hover{ border-color:var(--cyan); transform:translateY(-2px); }
- 
+
   /* -------- right profile card -------- */
   .card-wrap{ display:flex; justify-content:center; }
   .card{
@@ -100,7 +100,7 @@
     position:relative;
   }
   .cover svg{ position:absolute; inset:0; width:100%; height:100%; opacity:.55; }
- 
+
   .avatar{
     width:88px; height:88px; border-radius:22px;
     background:linear-gradient(160deg,#ffffff,#eafcff);
@@ -114,7 +114,7 @@
     width:16px;height:16px; border-radius:50%;
     background:#3ee08b; border:3px solid #fff;
   }
- 
+
   .card-body{ padding:14px 26px 26px; text-align:center; }
   .name{
     font-family:'Outfit',sans-serif; font-size:21px; font-weight:700;
@@ -122,7 +122,7 @@
   }
   .name svg{ width:16px; height:16px; }
   .role{ font-size:13.5px; color:var(--ink-soft); margin:0 0 8px; }
- 
+
   .visits{
     display:inline-flex; align-items:center; gap:6px;
     font-size:12px; color:var(--cyan-deep);
@@ -130,14 +130,14 @@
     padding:4px 12px; margin-bottom:16px;
   }
   .visits svg{ width:12px; height:12px; }
- 
+
   .badges{ display:flex; justify-content:center; gap:8px; margin-bottom:18px; }
   .badges span{
     width:30px;height:30px; border-radius:9px; background:var(--cyan-pale);
     display:flex; align-items:center; justify-content:center; color:var(--cyan-deep);
   }
   .badges svg{ width:15px;height:15px; }
- 
+
   .links{ display:flex; flex-direction:column; gap:9px; margin-bottom:18px; text-align:start; }
   .link-row{
     display:flex; align-items:center; gap:11px; padding:11px 14px;
@@ -155,7 +155,7 @@
   .link-row .meta{ margin-inline-start:auto; font-size:11.5px; font-weight:500; color:var(--ink-soft); }
   .link-row .del{ margin-inline-start:6px; color:#e0728a; cursor:pointer; font-size:16px; line-height:1; }
   .empty-hint{ font-size:12.5px; color:var(--ink-soft); text-align:center; padding:8px 0; }
- 
+
   .socials{ display:flex; justify-content:center; gap:10px; padding-top:16px; border-top:1px solid var(--line); flex-wrap:wrap; }
   .socials a{
     width:34px;height:34px; border-radius:10px; display:flex; align-items:center; justify-content:center;
@@ -169,7 +169,7 @@
     width:16px;height:16px; border-radius:50%; background:#e0728a; color:#fff;
     font-size:11px; display:flex; align-items:center; justify-content:center; cursor:pointer;
   }
- 
+
   /* -------- interest cards -------- */
   .interests{
     margin-top:44px;
@@ -192,17 +192,17 @@
     direction:ltr; text-align:right;
   }
   .interest-card p{ font-size:13.5px; color:var(--ink-soft); margin:0; }
- 
+
   @media (max-width:720px){
     .interests{ grid-template-columns:1fr; }
   }
- 
+
   /* -------- projects section -------- */
   .projects{ margin-top:80px; }
   .section-head{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom:24px; flex-wrap:wrap; gap:10px; }
   .section-head h2{ font-family:'Outfit',sans-serif; font-size:26px; font-weight:700; margin:0; }
   .section-head p{ font-size:14px; color:var(--ink-soft); margin:2px 0 0; }
- 
+
   .proj-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:16px; }
   .proj-card{
     background:#fff; border:1px solid var(--line); border-radius:16px;
@@ -225,13 +225,13 @@
   .proj-card span.desc{ font-size:13px; color:var(--ink-soft); line-height:1.6; }
   .proj-card .del{ position:absolute; top:10px; inset-inline-end:10px; color:#e0728a; cursor:pointer; font-size:16px; }
   .proj-empty{ border:1px dashed var(--line); border-radius:16px; padding:30px; text-align:center; color:var(--ink-soft); font-size:14px; }
- 
+
   /* -------- footer quote -------- */
   .quote{ margin-top:90px; text-align:center; padding:36px 20px 10px; border-top:1px solid var(--line); }
   .quote .en{ font-family:'Outfit',sans-serif; font-size:19px; font-weight:600; color:var(--ink); letter-spacing:.01em; }
   .quote .ar{ font-size:15px; color:var(--ink-soft); margin-top:6px; }
   .quote .rights{ font-size:12px; color:var(--ink-soft); margin-top:22px; opacity:.75; }
- 
+
   /* -------- top nav -------- */
   .topnav{
     max-width:1040px; margin:0 auto 20px;
@@ -242,7 +242,7 @@
     display:flex; align-items:center; gap:8px;
   }
   .brand .dot{ width:8px;height:8px;border-radius:50%; background:var(--cyan); }
- 
+
   .admin-trigger{
     display:inline-flex; align-items:center; gap:7px;
     background:#fff; border:1px solid var(--line); box-shadow:0 8px 20px -14px rgba(15,166,194,.5);
@@ -253,7 +253,7 @@
   .admin-trigger:hover{ border-color:var(--cyan); transform:translateY(-1px); }
   .admin-trigger svg{ width:16px; height:16px; }
   .admin-trigger.is-active{ background:var(--cyan-pale); border-color:var(--cyan); }
- 
+
   .overlay{
     position:fixed; inset:0; background:rgba(14,42,51,.35);
     backdrop-filter:blur(3px);
@@ -275,7 +275,7 @@
   .modal .primary{ background:linear-gradient(135deg,var(--cyan),var(--cyan-deep)); color:#fff; flex:1; }
   .modal .cancel{ background:#f1f5f6; color:var(--ink); flex:1; }
   .modal .error{ color:#e0728a; font-size:13px; margin:-4px 0 10px; display:none; }
- 
+
   .admin-panel .close-panel{
     position:absolute; top:16px; inset-inline-start:16px; cursor:pointer; color:var(--ink-soft);
     background:#f1f5f6; border:none; border-radius:9px; padding:8px 12px; font-family:inherit; font-size:13px; font-weight:600;
@@ -297,13 +297,13 @@
   .file-label:hover{ border-color:var(--cyan); color:var(--cyan-deep); }
   .file-label img{ max-height:70px; border-radius:8px; display:block; }
   .field-error{ font-size:12px; color:#e0728a; margin:-4px 0 8px; display:none; }
- 
+
   @media (max-width:880px){
     .intro-links{ justify-content:center; }
   }
- 
+
   @media (prefers-reduced-motion:reduce){ *{ transition:none !important; } }
- 
+
   /* -------- welcome section -------- */
   .welcome{
     background:#fbfdfe;
@@ -343,10 +343,10 @@
 </style>
 </head>
 <body>
- 
+
 <section class="welcome">
   <div class="welcome-inner">
-    <div class="welcome-avatar">A</div>
+    <div class="welcome-avatar">AZ</div>
     <p class="welcome-eyebrow">أهلاً وسهلاً</p>
     <h1 class="welcome-title">أنا عبدالعزيز</h1>
     <p class="welcome-text">تفضّل بجولة هادئة في صفحتي، فيها لمحة عني وعن شغلي.</p>
@@ -355,7 +355,7 @@
     </div>
   </div>
 </section>
- 
+
 <div class="wrap">
   <div class="topnav">
     <div class="brand"><span class="dot"></span>Abdulaziz</div>
@@ -365,7 +365,7 @@
     </button>
   </div>
   <div class="page">
- 
+
     <div class="card-wrap">
       <div class="card">
         <div class="cover">
@@ -373,51 +373,51 @@
             <path d="M0,80 C90,40 270,110 360,60 L360,118 L0,118 Z" fill="#ffffff" fill-opacity="0.25"/>
           </svg>
         </div>
- 
+
         <div class="avatar">
           AZ
           <span class="status"></span>
         </div>
- 
+
         <div class="card-body">
           <div class="name">
             Abdulaziz
             <svg viewBox="0 0 24 24" fill="none" stroke="#0fa6c2" stroke-width="2"><path d="M12 2l2.4 6.5L21 9l-5.2 4.4L17.5 21 12 17l-5.5 4 1.7-7.6L3 9l6.6-.5L12 2z"/></svg>
           </div>
-          <p class="role" id="roleText">محب للبرمجة والتطوير </p>
- 
+          <p class="role" id="roleText">محب للبرمجة والتطوير · المملكة العربية السعودية</p>
+
           <div class="visits">
-            <svg viewBox="100 100 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
             <span id="visitCount">—</span> زائر
           </div>
- 
+
           <div class="badges">
             <span title="مطور"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
             <span title="عضو مميز"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></span>
             <span title="موثّق"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
           </div>
- 
+
           <div id="links" class="links"></div>
- 
+
           <div id="socials" class="socials"></div>
         </div>
       </div>
     </div>
- 
+
   </div>
- 
+
   <div class="bio-section">
     <div class="intro">
       <div class="kicker"><span class="dot"></span>نبذة سريعة / 01</div>
       <h1>فضول تقني،<br><span class="cyan-line">وعقل يحرس التفاصيل.</span></h1>
       <p>محب لتحويل الأفكار إلى تجارب تعمل فعلاً، من سطر الكود الأول حتى آخر تفصيلة في الواجهة. البرمجة بالنسبة لي ليست مجرد أدوات؛ هي طريقة لفهم العالم وبنائه بشكل أذكى.</p>
-      <p> أن أفضل حماية تبدأ من الوعي، وتكبر مع كل تجربة.</p>
+      <p>وفي الأمن السيبراني، أؤمن أن أفضل حماية تبدأ من الوعي، وتكبر مع كل تجربة.</p>
       <div class="intro-links">
         <a href="#links" class="btn-solid">عرض روابطي</a>
         <a href="#socials" class="btn-ghost">تواصل معي</a>
       </div>
     </div>
- 
+
     <div class="interests">
       <div class="interest-card">
         <div class="interest-top">
@@ -441,11 +441,11 @@
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span>
         </div>
         <h3>Creative Web</h3>
-        <p.>أصنع وأبكتر</p.></p>
+        <p>أصمم بإحساس</p>
       </div>
     </div>
   </div>
- 
+
   <div class="projects">
     <div class="section-head">
       <div>
@@ -454,21 +454,19 @@
     </div>
     <div id="projGrid" class="proj-grid"></div>
   </div>
- 
+
   <div class="quote">
     <div class="en">Steps towards a distant goal</div>
     <div class="ar">خطوات باتجاه هدف بعيد</div>
-    <div class="rights">! <span id="year"></span> صنع بشغف من اول سطر كود </div>
-    <div class="rights">! <span id="year"></span> صنع يدويًا بعناية، وكل سطر يحتاج بصمتي ولمستي حتى تطلع بالشكل النهائي المميز</div>
-    <div class="rights">© <span id="year"></span> جميع الحقوق محفوظة لـ Abdulaziz 7z </div>
+    <div class="rights">© <span id="year"></span> جميع الحقوق محفوظة لـ 3ziz</div>
   </div>
 </div>
- 
+
 <!-- password modal -->
 <div class="overlay" id="pwOverlay">
   <div class="modal">
-    <h3> لوحة المالك خاصه لـ عبدالعزيز</h3>
-    <input type="password" id="pwInput" placeholder="- الرقم السري - مثال 123">
+    <h3>لوحة المالك</h3>
+    <input type="password" id="pwInput" placeholder="الرقم السري">
     <div class="error" id="pwError">رقم سري غير صحيح</div>
     <div class="row">
       <button class="cancel" id="pwCancel">إلغاء</button>
@@ -476,7 +474,7 @@
     </div>
   </div>
 </div>
- 
+
 <!-- admin panel -->
 <div class="overlay" id="adminOverlay">
   <div class="admin-panel">
@@ -485,22 +483,22 @@
       <h3 style="margin-top:26px;">لوحة التحكم</h3>
       <p style="font-size:12px;color:var(--ink-soft);margin:-8px 0 4px;">الجلسة تنتهي تلقائيًا بعد 15 دقيقة</p>
       <button id="logoutBtn" style="background:none;border:none;color:#e0728a;font-size:12px;font-weight:600;cursor:pointer;padding:0;margin-bottom:10px;">تسجيل خروج الآن</button>
- 
+
       <h4>البايو</h4>
       <textarea id="bioInput" placeholder="محب للبرمجة والتطوير · المملكة العربية السعودية"></textarea>
       <button class="primary" style="width:100%;" id="saveBio">حفظ البايو</button>
- 
+
       <h4>إضافة رابط (روابط، متجر، سيرفر...)</h4>
       <input type="text" id="linkLabel" placeholder="اسم الرابط، مثال: أعمالي">
       <input type="text" id="linkTag" placeholder="وسم صغير، مثال: portfolio">
       <input type="url" id="linkUrl" placeholder="https://...">
       <button class="primary" style="width:100%;" id="addLink">إضافة الرابط</button>
- 
+
       <h4>إضافة حساب تواصل اجتماعي</h4>
       <input type="text" id="socLabel" placeholder="اسم المنصة، مثال: تيك توك">
       <input type="url" id="socUrl" placeholder="https://...">
       <button class="primary" style="width:100%;" id="addSocial">إضافة الحساب</button>
- 
+
       <h4>إضافة مشروع</h4>
       <input type="text" id="projTitle" placeholder="اسم المشروع">
       <input type="text" id="projDesc" placeholder="وصف قصير">
@@ -512,21 +510,21 @@
       <input type="file" id="projImage" accept="image/*" style="display:none;">
       <button class="primary" style="width:100%;" id="addProj">إضافة المشروع</button>
       <div class="field-error" id="projError"></div>
- 
+
       <div class="save-note" id="saveNote">تم الحفظ ✓</div>
     </div>
   </div>
 </div>
- 
+
 <script>
 (function(){
   const PASSWORD = "aa11";
   const SESSION_MS = 15 * 60 * 1000; // 15 minutes
   let isAdmin = false;
   let logoutTimer = null;
- 
+
   document.getElementById('year').textContent = new Date().getFullYear();
- 
+
   function updateTriggerUI(){
     const btn = document.getElementById('adminTrigger');
     const label = document.getElementById('adminLabel');
@@ -538,7 +536,7 @@
       label.textContent = 'لوحة المالك';
     }
   }
- 
+
   function startSession(){
     if(logoutTimer) clearTimeout(logoutTimer);
     logoutTimer = setTimeout(()=>{
@@ -548,34 +546,37 @@
       render();
     }, SESSION_MS);
   }
- 
+
   function endSession(){
     isAdmin = false;
     if(logoutTimer) clearTimeout(logoutTimer);
     updateTriggerUI();
     render();
   }
- 
+
   let state = {
-    bio: "محب للبرمجة والتطوير",
+    bio: "محب للبرمجة والتطوير · المملكة العربية السعودية",
     links: [
-      { label:"أعمالي", tag:"portfolio", url:"https://discord.gg/3ziz", icon:"grid" },
-      { label:"متجر", tag:"store", url:"https://discord.gg/jza", icon:"cart" },
-      { label:"سيرفر الديسكورد", tag:"discord", url:"https://discord.gg/3ziz", icon:"discord" }
+      { label:"أعمالي", tag:"portfolio", url:"#", icon:"grid" },
+      { label:"متجري", tag:"store", url:"#", icon:"cart" },
+      { label:"سيرفر الديسكورد", tag:"discord", url:"#", icon:"discord" }
     ],
     socials: [
-      { label:"Discord", url:"https://discord.gg/3ziz", icon:"discord" },
+      { label:"Discord", url:"#", icon:"discord" },
+      { label:"Spotify", url:"#", icon:"circle" },
+      { label:"GitHub", url:"#", icon:"github" },
+      { label:"X", url:"#", icon:"x" }
     ],
     projects: []
   };
- 
+
   const hasCloudStorage = !!(window.storage && window.storage.get && window.storage.set);
   const hasLocalStorage = (function(){
     try{ const k='__az_test'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }
     catch(e){ return false; }
   })();
   const LOCAL_PREFIX = 'az_site_';
- 
+
   async function storageGet(key, shared){
     if(hasCloudStorage){
       try{ const res = await window.storage.get(key, shared); return res ? res.value : null; }
@@ -595,7 +596,7 @@
     }
     return false;
   }
- 
+
   const icons = {
     grid: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>',
     cart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>',
@@ -606,7 +607,7 @@
     link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1-1"/></svg>',
     proj: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>'
   };
- 
+
   async function loadState(){
     const raw = await storageGet('site-data', true);
     if(raw){
@@ -614,13 +615,13 @@
       catch(e){ /* corrupted or empty, keep defaults */ }
     }
   }
- 
+
   async function saveState(){
     const ok = await storageSet('site-data', JSON.stringify(state), true);
     if(!ok) console.error('storage save failed');
     return ok;
   }
- 
+
   async function bumpVisits(){
     const raw = await storageGet('visit-count', true);
     let count = raw ? (parseInt(raw,10) || 0) : 0;
@@ -628,14 +629,14 @@
     await storageSet('visit-count', String(count), true);
     document.getElementById('visitCount').textContent = count.toLocaleString('ar');
   }
- 
+
   function render(){
     document.getElementById('roleText').textContent = state.bio;
- 
+
     const linksEl = document.getElementById('links');
     linksEl.innerHTML = '';
     if(state.links.length === 0){
-      linksEl.innerHTML = '<div class="empty-hint">لايوجد رابط</div>';
+      linksEl.innerHTML = '<div class="empty-hint">ما فيه روابط بعد</div>';
     } else {
       state.links.forEach((l, i)=>{
         const a = document.createElement('a');
@@ -652,7 +653,7 @@
         linksEl.appendChild(a);
       });
     }
- 
+
     const socEl = document.getElementById('socials');
     socEl.innerHTML = '';
     state.socials.forEach((s,i)=>{
@@ -667,11 +668,11 @@
       }
       socEl.appendChild(a);
     });
- 
+
     const projEl = document.getElementById('projGrid');
     projEl.innerHTML = '';
     if(state.projects.length === 0){
-      projEl.innerHTML = '<div class="proj-empty">لايوجد مشاريع</div>';
+      projEl.innerHTML = '<div class="proj-empty">ما فيه مشاريع مضافة بعد — استخدم لوحة المالك عشان تضيف مشاريعك</div>';
     } else {
       state.projects.forEach((p,i)=>{
         const a = document.createElement('a');
@@ -690,13 +691,13 @@
       });
     }
   }
- 
+
   function flashSaved(){
     const n = document.getElementById('saveNote');
     n.style.display = 'block';
     setTimeout(()=>{ n.style.display = 'none'; }, 1400);
   }
- 
+
   document.getElementById('adminTrigger').onclick = ()=>{
     if(isAdmin){
       document.getElementById('bioInput').value = state.bio;
@@ -730,12 +731,12 @@
     document.getElementById('adminOverlay').classList.remove('show');
     endSession();
   };
- 
+
   document.getElementById('saveBio').onclick = ()=>{
     state.bio = document.getElementById('bioInput').value.trim() || state.bio;
     saveState(); render(); flashSaved();
   };
- 
+
   document.getElementById('addLink').onclick = ()=>{
     const label = document.getElementById('linkLabel').value.trim();
     const tag = document.getElementById('linkTag').value.trim();
@@ -747,7 +748,7 @@
     document.getElementById('linkUrl').value = '';
     saveState(); render(); flashSaved();
   };
- 
+
   document.getElementById('addSocial').onclick = ()=>{
     const label = document.getElementById('socLabel').value.trim();
     const url = document.getElementById('socUrl').value.trim();
@@ -757,9 +758,9 @@
     document.getElementById('socUrl').value = '';
     saveState(); render(); flashSaved();
   };
- 
+
   let pendingProjImage = null;
- 
+
   function resizeImage(file){
     return new Promise((resolve, reject)=>{
       const reader = new FileReader();
@@ -782,7 +783,7 @@
       reader.readAsDataURL(file);
     });
   }
- 
+
   document.getElementById('projImage').addEventListener('change', async (e)=>{
     const file = e.target.files[0];
     if(!file) return;
@@ -799,7 +800,7 @@
       errEl.style.display = 'block';
     }
   });
- 
+
   document.getElementById('addProj').onclick = async ()=>{
     const title = document.getElementById('projTitle').value.trim();
     const desc = document.getElementById('projDesc').value.trim();
@@ -807,11 +808,11 @@
     const errEl = document.getElementById('projError');
     errEl.style.display = 'none';
     if(!title) return;
- 
+
     const project = { title, desc, url };
     if(pendingProjImage) project.image = pendingProjImage;
     state.projects.push(project);
- 
+
     const ok = await saveState();
     if(!ok){
       state.projects.pop();
@@ -819,7 +820,7 @@
       errEl.style.display = 'block';
       return;
     }
- 
+
     document.getElementById('projTitle').value = '';
     document.getElementById('projDesc').value = '';
     document.getElementById('projUrl').value = '';
@@ -827,10 +828,10 @@
     document.getElementById('projImagePreview').style.display = 'none';
     document.getElementById('projImageText').textContent = 'إضافة صورة للمشروع (اختياري)';
     pendingProjImage = null;
- 
+
     render(); flashSaved();
   };
- 
+
   (async function init(){
     updateTriggerUI();
     await loadState();
@@ -839,7 +840,6 @@
   })();
 })();
 </script>
- 
+
 </body>
 </html>
- 
