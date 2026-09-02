@@ -20,9 +20,9 @@
     --line:#d7f0f4;
     --shadow: 0 30px 60px -25px rgba(15,166,194,.35);
   }
-
+ 
   *{box-sizing:border-box;}
-
+ 
   body{
     margin:0;
     min-height:100vh;
@@ -32,101 +32,65 @@
       radial-gradient(700px 500px at 100% 10%, #e9fbfd 0%, transparent 55%),
       linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
     color:var(--ink);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:48px 20px;
   }
-
+ 
+  .wrap{ max-width:1040px; margin:0 auto; padding:48px 20px 40px; }
+ 
   .page{
-    width:100%;
-    max-width:1040px;
-    display:grid;
-    grid-template-columns:1.1fr 1fr;
-    gap:56px;
-    align-items:center;
+    display:flex;
+    justify-content:center;
   }
-
+ 
+  .bio-section{ margin-top:80px; }
+  .bio-section .intro{ padding:0; text-align:center; max-width:640px; margin:0 auto; }
+  .bio-section .intro p{ margin-inline:auto; }
+  .bio-section .intro-links{ justify-content:center; }
+  .bio-section .interests{ margin-top:48px; }
+ 
   /* -------- left intro column -------- */
-  .intro{
-    padding-inline-start:8px;
-  }
+  .intro{ padding-inline-start:8px; }
   .kicker{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    font-size:14px;
-    color:var(--cyan-deep);
-    background:var(--cyan-pale);
-    border:1px solid var(--line);
-    padding:6px 14px 6px 10px;
-    border-radius:999px;
-    margin-bottom:22px;
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:14px; color:var(--cyan-deep);
+    background:var(--cyan-pale); border:1px solid var(--line);
+    padding:6px 14px 6px 10px; border-radius:999px; margin-bottom:22px;
   }
   .kicker span.dot{
     width:7px;height:7px;border-radius:50%;
-    background:var(--cyan);
-    box-shadow:0 0 0 4px rgba(34,195,221,.18);
+    background:var(--cyan); box-shadow:0 0 0 4px rgba(28, 181, 204, 0.18);
   }
   .intro h1{
     font-family:'Outfit',sans-serif;
     font-size:clamp(36px,4.2vw,54px);
-    line-height:1.08;
-    font-weight:700;
-    margin:0 0 18px;
-    letter-spacing:-0.01em;
+    line-height:1.08; font-weight:700; margin:0 0 18px; letter-spacing:-0.01em;
   }
-  .intro h1 em{
-    font-style:normal;
-    color:var(--cyan-deep);
-  }
+  .intro h1 em{ font-style:normal; color:var(--cyan-deep); }
+  .intro h1 .cyan-line{ color:var(--cyan-deep); }
   .intro p{
-    font-size:17px;
-    line-height:1.85;
-    color:var(--ink-soft);
-    max-width:44ch;
-    margin:0 0 30px;
+    font-size:17px; line-height:1.85; color:var(--ink-soft);
+    max-width:46ch; margin:0 0 14px;
   }
-  .intro-links{
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
-  }
+  .intro p:last-of-type{ margin-bottom:30px; }
+  .intro-links{ display:flex; gap:14px; flex-wrap:wrap; }
   .intro-links a{
-    text-decoration:none;
-    font-size:15px;
-    font-weight:600;
-    padding:12px 22px;
-    border-radius:12px;
+    text-decoration:none; font-size:15px; font-weight:600;
+    padding:12px 22px; border-radius:12px;
     transition:transform .18s ease, box-shadow .18s ease;
   }
   .btn-solid{
     background:linear-gradient(135deg,var(--cyan),var(--cyan-deep));
-    color:#fff;
-    box-shadow:0 14px 26px -12px rgba(15,166,194,.55);
+    color:#fff; box-shadow:0 14px 26px -12px rgba(15,166,194,.55);
   }
   .btn-solid:hover{ transform:translateY(-2px); }
-  .btn-ghost{
-    color:var(--ink);
-    background:#fff;
-    border:1px solid var(--line);
-  }
+  .btn-ghost{ color:var(--ink); background:#fff; border:1px solid var(--line); }
   .btn-ghost:hover{ border-color:var(--cyan); transform:translateY(-2px); }
-
+ 
   /* -------- right profile card -------- */
-  .card-wrap{
-    display:flex;
-    justify-content:center;
-  }
+  .card-wrap{ display:flex; justify-content:center; }
   .card{
-    position:relative;
-    width:100%;
-    max-width:360px;
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:26px;
-    box-shadow:var(--shadow);
-    overflow:hidden;
+    position:relative; width:100%; max-width:360px;
+    background:var(--card); border:1px solid var(--line);
+    border-radius:26px; box-shadow:var(--shadow); overflow:hidden;
   }
   .cover{
     height:118px;
@@ -135,221 +99,747 @@
       linear-gradient(120deg,#4fd7ea,#0fa6c2 65%);
     position:relative;
   }
-  .cover svg{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    opacity:.55;
-  }
-
+  .cover svg{ position:absolute; inset:0; width:100%; height:100%; opacity:.55; }
+ 
   .avatar{
-    width:88px;
-    height:88px;
-    border-radius:22px;
+    width:88px; height:88px; border-radius:22px;
     background:linear-gradient(160deg,#ffffff,#eafcff);
-    border:4px solid #fff;
-    box-shadow:0 10px 24px -10px rgba(15,166,194,.5);
-    margin:-46px auto 0;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-family:'Outfit',sans-serif;
-    font-weight:700;
-    font-size:30px;
-    color:var(--cyan-deep);
+    border:4px solid #fff; box-shadow:0 10px 24px -10px rgba(15,166,194,.5);
+    margin:-46px auto 0; position:relative;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Outfit',sans-serif; font-weight:700; font-size:30px; color:var(--cyan-deep);
   }
   .status{
-    position:absolute;
-    bottom:2px;
-    inset-inline-end:2px;
-    width:16px;height:16px;
-    border-radius:50%;
-    background:#3ee08b;
-    border:3px solid #fff;
+    position:absolute; bottom:2px; inset-inline-end:2px;
+    width:16px;height:16px; border-radius:50%;
+    background:#3ee08b; border:3px solid #fff;
   }
-
-  .card-body{
-    padding:14px 26px 26px;
-    text-align:center;
-  }
+ 
+  .card-body{ padding:14px 26px 26px; text-align:center; }
   .name{
-    font-family:'Outfit',sans-serif;
-    font-size:21px;
-    font-weight:700;
-    margin:8px 0 2px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:6px;
+    font-family:'Outfit',sans-serif; font-size:21px; font-weight:700;
+    margin:8px 0 2px; display:flex; align-items:center; justify-content:center; gap:6px;
   }
   .name svg{ width:16px; height:16px; }
-  .role{
-    font-size:13.5px;
-    color:var(--ink-soft);
-    margin:0 0 14px;
+  .role{ font-size:13.5px; color:var(--ink-soft); margin:0 0 8px; }
+ 
+  .visits{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:12px; color:var(--cyan-deep);
+    background:var(--cyan-pale); border-radius:999px;
+    padding:4px 12px; margin-bottom:16px;
   }
-
-  .badges{
-    display:flex;
-    justify-content:center;
-    gap:8px;
-    margin-bottom:18px;
-  }
+  .visits svg{ width:12px; height:12px; }
+ 
+  .badges{ display:flex; justify-content:center; gap:8px; margin-bottom:18px; }
   .badges span{
-    width:30px;height:30px;
-    border-radius:9px;
-    background:var(--cyan-pale);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:var(--cyan-deep);
+    width:30px;height:30px; border-radius:9px; background:var(--cyan-pale);
+    display:flex; align-items:center; justify-content:center; color:var(--cyan-deep);
   }
   .badges svg{ width:15px;height:15px; }
-
-  .links{
-    display:flex;
-    flex-direction:column;
-    gap:9px;
-    margin-bottom:18px;
-    text-align:start;
-  }
+ 
+  .links{ display:flex; flex-direction:column; gap:9px; margin-bottom:18px; text-align:start; }
   .link-row{
-    display:flex;
-    align-items:center;
-    gap:11px;
-    padding:11px 14px;
-    background:#f6fdfe;
-    border:1px solid var(--line);
-    border-radius:13px;
-    font-size:13.5px;
-    font-weight:600;
-    color:var(--ink);
-    text-decoration:none;
+    display:flex; align-items:center; gap:11px; padding:11px 14px;
+    background:#f6fdfe; border:1px solid var(--line); border-radius:13px;
+    font-size:13.5px; font-weight:600; color:var(--ink); text-decoration:none;
     transition:border-color .15s ease, background .15s ease;
   }
-  .link-row:hover{
-    border-color:var(--cyan);
-    background:#eefcfe;
-  }
+  .link-row:hover{ border-color:var(--cyan); background:#eefcfe; }
   .link-row .ic{
-    width:30px;height:30px;
-    min-width:30px;
-    border-radius:9px;
-    background:var(--cyan-pale);
-    color:var(--cyan-deep);
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    width:30px;height:30px; min-width:30px; border-radius:9px;
+    background:var(--cyan-pale); color:var(--cyan-deep);
+    display:flex; align-items:center; justify-content:center;
   }
   .link-row .ic svg{ width:15px;height:15px; }
-  .link-row .meta{
-    margin-inline-start:auto;
-    font-size:11.5px;
-    font-weight:500;
-    color:var(--ink-soft);
-  }
-
-  .socials{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    padding-top:16px;
-    border-top:1px solid var(--line);
-  }
+  .link-row .meta{ margin-inline-start:auto; font-size:11.5px; font-weight:500; color:var(--ink-soft); }
+  .link-row .del{ margin-inline-start:6px; color:#e0728a; cursor:pointer; font-size:16px; line-height:1; }
+  .empty-hint{ font-size:12.5px; color:var(--ink-soft); text-align:center; padding:8px 0; }
+ 
+  .socials{ display:flex; justify-content:center; gap:10px; padding-top:16px; border-top:1px solid var(--line); flex-wrap:wrap; }
   .socials a{
-    width:34px;height:34px;
-    border-radius:10px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:var(--cyan-deep);
-    background:var(--cyan-pale);
-    transition:transform .15s ease, background .15s ease;
+    width:34px;height:34px; border-radius:10px; display:flex; align-items:center; justify-content:center;
+    color:var(--cyan-deep); background:var(--cyan-pale);
+    transition:transform .15s ease, background .15s ease; position:relative; text-decoration:none;
   }
   .socials a:hover{ transform:translateY(-2px); background:#c9f2f7; }
   .socials svg{ width:16px;height:16px; }
-
+  .socials .del{
+    position:absolute; top:-6px; inset-inline-end:-6px;
+    width:16px;height:16px; border-radius:50%; background:#e0728a; color:#fff;
+    font-size:11px; display:flex; align-items:center; justify-content:center; cursor:pointer;
+  }
+ 
+  /* -------- interest cards -------- */
+  .interests{
+    margin-top:44px;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
+  }
+  .interest-card{
+    background:#fff; border:1px solid var(--line); border-radius:16px;
+    padding:22px; transition:border-color .15s ease, transform .15s ease;
+  }
+  .interest-card:hover{ border-color:var(--cyan); transform:translateY(-3px); }
+  .interest-top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:34px; }
+  .interest-top .num{ font-family:'Outfit',sans-serif; font-size:13px; color:var(--line); font-weight:600; direction:ltr; }
+  .interest-top .ic{
+    width:34px; height:34px; border-radius:10px; background:var(--cyan-pale);
+    color:var(--cyan-deep); display:flex; align-items:center; justify-content:center;
+  }
+  .interest-top .ic svg{ width:16px; height:16px; }
+  .interest-card h3{
+    font-family:'Outfit',sans-serif; font-size:15px; font-weight:700; margin:0 0 4px;
+    direction:ltr; text-align:right;
+  }
+  .interest-card p{ font-size:13.5px; color:var(--ink-soft); margin:0; }
+ 
+  @media (max-width:720px){
+    .interests{ grid-template-columns:1fr; }
+  }
+ 
+  /* -------- projects section -------- */
+  .projects{ margin-top:80px; }
+  .section-head{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom:24px; flex-wrap:wrap; gap:10px; }
+  .section-head h2{ font-family:'Outfit',sans-serif; font-size:26px; font-weight:700; margin:0; }
+  .section-head p{ font-size:14px; color:var(--ink-soft); margin:2px 0 0; }
+ 
+  .proj-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:16px; }
+  .proj-card{
+    background:#fff; border:1px solid var(--line); border-radius:16px;
+    padding:20px; text-decoration:none; color:var(--ink);
+    display:flex; flex-direction:column; gap:8px; position:relative;
+    transition:border-color .15s ease, transform .15s ease;
+    overflow:hidden;
+  }
+  .proj-card .thumb{
+    width:calc(100% + 40px); margin:-20px -20px 4px;
+    height:120px; object-fit:cover; display:block;
+  }
+  .proj-card:hover{ border-color:var(--cyan); transform:translateY(-3px); }
+  .proj-card .tag{
+    width:34px;height:34px; border-radius:10px; background:var(--cyan-pale);
+    color:var(--cyan-deep); display:flex; align-items:center; justify-content:center;
+  }
+  .proj-card .tag svg{ width:16px;height:16px; }
+  .proj-card h3{ font-size:15.5px; margin:2px 0 0; font-weight:700; }
+  .proj-card span.desc{ font-size:13px; color:var(--ink-soft); line-height:1.6; }
+  .proj-card .del{ position:absolute; top:10px; inset-inline-end:10px; color:#e0728a; cursor:pointer; font-size:16px; }
+  .proj-empty{ border:1px dashed var(--line); border-radius:16px; padding:30px; text-align:center; color:var(--ink-soft); font-size:14px; }
+ 
+  /* -------- footer quote -------- */
+  .quote{ margin-top:90px; text-align:center; padding:36px 20px 10px; border-top:1px solid var(--line); }
+  .quote .en{ font-family:'Outfit',sans-serif; font-size:19px; font-weight:600; color:var(--ink); letter-spacing:.01em; }
+  .quote .ar{ font-size:15px; color:var(--ink-soft); margin-top:6px; }
+  .quote .rights{ font-size:12px; color:var(--ink-soft); margin-top:22px; opacity:.75; }
+ 
+  /* -------- top nav -------- */
+  .topnav{
+    max-width:1040px; margin:0 auto 20px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand{
+    font-family:'Outfit',sans-serif; font-weight:700; font-size:15px; color:var(--ink);
+    display:flex; align-items:center; gap:8px;
+  }
+  .brand .dot{ width:8px;height:8px;border-radius:50%; background:var(--cyan); }
+ 
+  .admin-trigger{
+    display:inline-flex; align-items:center; gap:7px;
+    background:#fff; border:1px solid var(--line); box-shadow:0 8px 20px -14px rgba(15,166,194,.5);
+    border-radius:999px; padding:9px 16px 9px 14px;
+    color:var(--cyan-deep); cursor:pointer; font-family:'Cairo',sans-serif; font-size:13px; font-weight:600;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .admin-trigger:hover{ border-color:var(--cyan); transform:translateY(-1px); }
+  .admin-trigger svg{ width:16px; height:16px; }
+  .admin-trigger.is-active{ background:var(--cyan-pale); border-color:var(--cyan); }
+ 
+  .overlay{
+    position:fixed; inset:0; background:rgba(14,42,51,.35);
+    backdrop-filter:blur(3px);
+    display:none; align-items:center; justify-content:center; z-index:50; padding:20px;
+  }
+  .overlay.show{ display:flex; }
+  .modal{
+    background:#fff; border-radius:20px; width:100%; max-width:380px;
+    padding:26px; box-shadow:var(--shadow); border:1px solid var(--line);
+  }
+  .modal h3{ margin:0 0 14px; font-family:'Outfit',sans-serif; font-size:19px; }
+  .modal input{
+    width:100%; padding:12px 14px; border-radius:11px; border:1px solid var(--line);
+    font-size:15px; font-family:inherit; margin-bottom:10px; background:#f6fdfe; color:var(--ink);
+  }
+  .modal input:focus{ outline:2px solid var(--cyan); outline-offset:1px; }
+  .modal .row{ display:flex; gap:10px; }
+  .modal .row button, .modal > button{ padding:11px 18px; border-radius:11px; border:none; font-weight:600; cursor:pointer; font-family:inherit; font-size:14px; }
+  .modal .primary{ background:linear-gradient(135deg,var(--cyan),var(--cyan-deep)); color:#fff; flex:1; }
+  .modal .cancel{ background:#f1f5f6; color:var(--ink); flex:1; }
+  .modal .error{ color:#e0728a; font-size:13px; margin:-4px 0 10px; display:none; }
+ 
+  .admin-panel .close-panel{
+    position:absolute; top:16px; inset-inline-start:16px; cursor:pointer; color:var(--ink-soft);
+    background:#f1f5f6; border:none; border-radius:9px; padding:8px 12px; font-family:inherit; font-size:13px; font-weight:600;
+  }
+  .admin-panel .modal{ max-width:460px; max-height:82vh; overflow-y:auto; position:relative; }
+  .admin-panel h4{ font-size:14px; margin:18px 0 8px; color:var(--ink-soft); }
+  .admin-panel h4:first-of-type{ margin-top:34px; }
+  .admin-panel textarea{
+    width:100%; padding:12px 14px; border-radius:11px; border:1px solid var(--line);
+    font-size:14px; font-family:inherit; background:#f6fdfe; color:var(--ink); resize:vertical; min-height:70px; margin-bottom:10px;
+  }
+  .save-note{ font-size:12px; color:var(--cyan-deep); margin-top:8px; display:none; }
+  .file-label{
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    border:1.5px dashed var(--line); border-radius:11px; padding:14px;
+    font-size:13px; color:var(--ink-soft); cursor:pointer; margin-bottom:10px;
+    transition:border-color .15s ease, color .15s ease; text-align:center;
+  }
+  .file-label:hover{ border-color:var(--cyan); color:var(--cyan-deep); }
+  .file-label img{ max-height:70px; border-radius:8px; display:block; }
+  .field-error{ font-size:12px; color:#e0728a; margin:-4px 0 8px; display:none; }
+ 
   @media (max-width:880px){
-    .page{ grid-template-columns:1fr; gap:40px; }
-    .intro{ text-align:center; padding:0; }
-    .intro p{ margin-inline:auto; }
     .intro-links{ justify-content:center; }
   }
-
-  @media (prefers-reduced-motion:reduce){
-    *{ transition:none !important; }
+ 
+  @media (prefers-reduced-motion:reduce){ *{ transition:none !important; } }
+ 
+  /* -------- welcome section -------- */
+  .welcome{
+    background:#fbfdfe;
+    border-bottom:1px solid var(--line);
+    padding:90px 20px 76px;
+    display:flex;
+    justify-content:center;
   }
+  .welcome-inner{
+    max-width:520px;
+    text-align:center;
+  }
+  .welcome-avatar{
+    width:64px; height:64px; margin:0 auto 26px;
+    border-radius:18px;
+    background:var(--cyan-pale);
+    color:var(--cyan-deep);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Outfit',sans-serif; font-weight:700; font-size:21px;
+  }
+  .welcome-eyebrow{
+    font-size:14px; color:var(--ink-soft); margin:0 0 10px;
+  }
+  .welcome-title{
+    font-family:'Outfit',sans-serif; font-weight:700;
+    font-size:clamp(30px,4vw,40px);
+    margin:0 0 14px; color:var(--ink); letter-spacing:-0.01em;
+  }
+  .welcome-text{
+    font-size:15.5px; line-height:1.8; color:var(--ink-soft);
+    margin:0 0 34px;
+  }
+  .welcome-cue{
+    display:flex; justify-content:center; color:var(--cyan-deep); opacity:.6;
+  }
+  .welcome-cue svg{ width:20px; height:20px; }
 </style>
 </head>
 <body>
-
-<div class="page">
-
-  <div class="intro">
-    <div class="kicker"><span class="dot"></span>الصفحة الشخصية</div>
-    <h1>عبدالعزيز، <em>مرحبًا بك في صفحتي</em></h1>
-    <p>هذي صفحتي الشخصية اللي تجمع كل روابطي وحساباتي في مكان واحد، تصفح واختر اللي يناسبك.</p>
-      <p>تم تعزيز المتصفح بأقصى طبقات الحماية المتقدمة، مع تطبيق إجراءات Hardening متعددة لتقليل سطح الهجوم ورفع مستوى العزل والأمان.</p>
-    <div class="intro-links">
-      <a href="#links" class="btn-solid">عرض روابطي</a>
-      <a href="#socials" class="btn-ghost">تواصل معي</a>
+ 
+<section class="welcome">
+  <div class="welcome-inner">
+    <div class="welcome-avatar">A</div>
+    <p class="welcome-eyebrow">أهلاً وسهلاً</p>
+    <h1 class="welcome-title">أنا عبدالعزيز</h1>
+    <p class="welcome-text">تفضّل بجولة هادئة في صفحتي، فيها لمحة عني وعن شغلي.</p>
+    <div class="welcome-cue">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
     </div>
   </div>
-
-  <div class="card-wrap">
-    <div class="card">
-      <div class="cover">
-        <svg viewBox="0 0 360 118" preserveAspectRatio="none">
-          <path d="M0,80 C90,40 270,110 360,60 L360,118 L0,118 Z" fill="#ffffff" fill-opacity="0.25"/>
-        </svg>
-      </div>
-
-      <div class="avatar">
-        AZ
-        <span class="status"></span>
-      </div>
-
-      <div class="card-body">
-        <div class="name">
-          Abdulaziz
-          <svg viewBox="0 0 24 24" fill="none" stroke="#0fa6c2" stroke-width="2"><path d="M12 2l2.4 6.5L21 9l-5.2 4.4L17.5 21 12 17l-5.5 4 1.7-7.6L3 9l6.6-.5L12 2z"/></svg>
+</section>
+ 
+<div class="wrap">
+  <div class="topnav">
+    <div class="brand"><span class="dot"></span>Abdulaziz</div>
+    <button class="admin-trigger" id="adminTrigger" title="لوحة المالك">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      <span id="adminLabel">لوحة المالك</span>
+    </button>
+  </div>
+  <div class="page">
+ 
+    <div class="card-wrap">
+      <div class="card">
+        <div class="cover">
+          <svg viewBox="0 0 360 118" preserveAspectRatio="none">
+            <path d="M0,80 C90,40 270,110 360,60 L360,118 L0,118 Z" fill="#ffffff" fill-opacity="0.25"/>
+          </svg>
         </div>
-        <p class="role">محب للبرمجة والتطوير</p>
-
-        <div class="badges">
-          <span title="مطور"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
-          <span title="عضو مميز"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></span>
-          <span title="موثّق"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
+ 
+        <div class="avatar">
+          AZ
+          <span class="status"></span>
         </div>
-
-        <div id="links" class="links">
-          <a class="link-row" href="https://discord.gg/3ziz">
-            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
-            أعمالي
-            <span class="meta">portfolio</span>
-          </a>
-          <a class="link-row" href="https://discord.gg/3ziz">
-            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></span>
-            متجري
-            <span class="meta">store</span>
-          </a>
-          <a class="link-rowz" href="https://discord.gg/3ziz">
-            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.3 4.7A17 17 0 0 0 15.8 3l-.4.8a13 13 0 0 1 3.7 1.5"/><path d="M3.7 4.7A17 17 0 0 1 8.2 3l.4.8A13 13 0 0 0 4.9 5.3"/><rect x="4" y="6" width="16" height="12" rx="4"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/></svg></span>
-            سيرفر الديسكورد
-            <span class="meta">discord</span>
-          </a>
-        </div>
-
-        <div id="socials" class="socials">
-          <a href="https://discord.gg/3ziz" title="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.7A17 17 0 0 0 15.8 3l-.4.8a13 13 0 0 1 3.7 1.5c-1.5-.8-3.2-1.3-5-1.5-1.8-.2-3.7 0-5.5.6-.4.1-.9.3-1.3.5l-.4-.8A17 17 0 0 0 3.7 4.7C1.6 8 1 11.3 1.2 14.6a17 17 0 0 0 5.2 2.6l.7-1.1a11 11 0 0 1-1.7-.8l.4-.3c3.3 1.5 6.9 1.5 10.2 0l.4.3a11 11 0 0 1-1.7.8l.7 1.1a17 17 0 0 0 5.2-2.6C23 11.1 22.2 7.8 20.3 4.7zM8.7 13.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg></a>
+ 
+        <div class="card-body">
+          <div class="name">
+            Abdulaziz
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0fa6c2" stroke-width="2"><path d="M12 2l2.4 6.5L21 9l-5.2 4.4L17.5 21 12 17l-5.5 4 1.7-7.6L3 9l6.6-.5L12 2z"/></svg>
+          </div>
+          <p class="role" id="roleText">محب للبرمجة والتطوير </p>
+ 
+          <div class="visits">
+            <svg viewBox="100 100 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span id="visitCount">—</span> زائر
+          </div>
+ 
+          <div class="badges">
+            <span title="مطور"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+            <span title="عضو مميز"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></span>
+            <span title="موثّق"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
+          </div>
+ 
+          <div id="links" class="links"></div>
+ 
+          <div id="socials" class="socials"></div>
         </div>
       </div>
     </div>
+ 
   </div>
-
+ 
+  <div class="bio-section">
+    <div class="intro">
+      <div class="kicker"><span class="dot"></span>نبذة سريعة / 01</div>
+      <h1>فضول تقني،<br><span class="cyan-line">وعقل يحرس التفاصيل.</span></h1>
+      <p>محب لتحويل الأفكار إلى تجارب تعمل فعلاً، من سطر الكود الأول حتى آخر تفصيلة في الواجهة. البرمجة بالنسبة لي ليست مجرد أدوات؛ هي طريقة لفهم العالم وبنائه بشكل أذكى.</p>
+      <p> أن أفضل حماية تبدأ من الوعي، وتكبر مع كل تجربة.</p>
+      <div class="intro-links">
+        <a href="#links" class="btn-solid">عرض روابطي</a>
+        <a href="#socials" class="btn-ghost">تواصل معي</a>
+      </div>
+    </div>
+ 
+    <div class="interests">
+      <div class="interest-card">
+        <div class="interest-top">
+          <span class="num">01</span>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+        </div>
+        <h3>Programming</h3>
+        <p>أبني من الصفر</p>
+      </div>
+      <div class="interest-card">
+        <div class="interest-top">
+          <span class="num">02</span>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg></span>
+        </div>
+        <h3>Cybersecurity</h3>
+        <p>أحمي ما يهم</p>
+      </div>
+      <div class="interest-card">
+        <div class="interest-top">
+          <span class="num">03</span>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span>
+        </div>
+        <h3>Creative Web</h3>
+        <p.>أصنع وأبكتر</p.></p>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="projects">
+    <div class="section-head">
+      <div>
+        <h2>نبذة من مشاريعي</h2>
+      </div>
+    </div>
+    <div id="projGrid" class="proj-grid"></div>
+  </div>
+ 
+  <div class="quote">
+    <div class="en">Steps towards a distant goal</div>
+    <div class="ar">خطوات باتجاه هدف بعيد</div>
+    <div class="rights">! <span id="year"></span> صنع بشغف من اول سطر كود </div>
+    <div class="rights">! <span id="year"></span> صنع يدويًا بعناية، وكل سطر يحتاج بصمتي ولمستي حتى تطلع بالشكل النهائي المميز</div>
+    <div class="rights">© <span id="year"></span> جميع الحقوق محفوظة لـ Abdulaziz 7z </div>
+  </div>
 </div>
-
+ 
+<!-- password modal -->
+<div class="overlay" id="pwOverlay">
+  <div class="modal">
+    <h3> لوحة المالك خاصه لـ عبدالعزيز</h3>
+    <input type="password" id="pwInput" placeholder="- الرقم السري - مثال 123">
+    <div class="error" id="pwError">رقم سري غير صحيح</div>
+    <div class="row">
+      <button class="cancel" id="pwCancel">إلغاء</button>
+      <button class="primary" id="pwSubmit">دخول</button>
+    </div>
+  </div>
+</div>
+ 
+<!-- admin panel -->
+<div class="overlay" id="adminOverlay">
+  <div class="admin-panel">
+    <div class="modal">
+      <button class="close-panel" id="closeAdmin">إغلاق</button>
+      <h3 style="margin-top:26px;">لوحة التحكم</h3>
+      <p style="font-size:12px;color:var(--ink-soft);margin:-8px 0 4px;">الجلسة تنتهي تلقائيًا بعد 15 دقيقة</p>
+      <button id="logoutBtn" style="background:none;border:none;color:#e0728a;font-size:12px;font-weight:600;cursor:pointer;padding:0;margin-bottom:10px;">تسجيل خروج الآن</button>
+ 
+      <h4>البايو</h4>
+      <textarea id="bioInput" placeholder="محب للبرمجة والتطوير · المملكة العربية السعودية"></textarea>
+      <button class="primary" style="width:100%;" id="saveBio">حفظ البايو</button>
+ 
+      <h4>إضافة رابط (روابط، متجر، سيرفر...)</h4>
+      <input type="text" id="linkLabel" placeholder="اسم الرابط، مثال: أعمالي">
+      <input type="text" id="linkTag" placeholder="وسم صغير، مثال: portfolio">
+      <input type="url" id="linkUrl" placeholder="https://...">
+      <button class="primary" style="width:100%;" id="addLink">إضافة الرابط</button>
+ 
+      <h4>إضافة حساب تواصل اجتماعي</h4>
+      <input type="text" id="socLabel" placeholder="اسم المنصة، مثال: تيك توك">
+      <input type="url" id="socUrl" placeholder="https://...">
+      <button class="primary" style="width:100%;" id="addSocial">إضافة الحساب</button>
+ 
+      <h4>إضافة مشروع</h4>
+      <input type="text" id="projTitle" placeholder="اسم المشروع">
+      <input type="text" id="projDesc" placeholder="وصف قصير">
+      <input type="url" id="projUrl" placeholder="https://...">
+      <label class="file-label" for="projImage">
+        <span id="projImageText">إضافة صورة للمشروع (اختياري)</span>
+        <img id="projImagePreview" style="display:none;">
+      </label>
+      <input type="file" id="projImage" accept="image/*" style="display:none;">
+      <button class="primary" style="width:100%;" id="addProj">إضافة المشروع</button>
+      <div class="field-error" id="projError"></div>
+ 
+      <div class="save-note" id="saveNote">تم الحفظ ✓</div>
+    </div>
+  </div>
+</div>
+ 
+<script>
+(function(){
+  const PASSWORD = "aa11";
+  const SESSION_MS = 15 * 60 * 1000; // 15 minutes
+  let isAdmin = false;
+  let logoutTimer = null;
+ 
+  document.getElementById('year').textContent = new Date().getFullYear();
+ 
+  function updateTriggerUI(){
+    const btn = document.getElementById('adminTrigger');
+    const label = document.getElementById('adminLabel');
+    if(isAdmin){
+      btn.classList.add('is-active');
+      label.textContent = 'لوحة التحكم';
+    } else {
+      btn.classList.remove('is-active');
+      label.textContent = 'لوحة المالك';
+    }
+  }
+ 
+  function startSession(){
+    if(logoutTimer) clearTimeout(logoutTimer);
+    logoutTimer = setTimeout(()=>{
+      isAdmin = false;
+      document.getElementById('adminOverlay').classList.remove('show');
+      updateTriggerUI();
+      render();
+    }, SESSION_MS);
+  }
+ 
+  function endSession(){
+    isAdmin = false;
+    if(logoutTimer) clearTimeout(logoutTimer);
+    updateTriggerUI();
+    render();
+  }
+ 
+  let state = {
+    bio: "محب للبرمجة والتطوير",
+    links: [
+      { label:"أعمالي", tag:"portfolio", url:"https://discord.gg/3ziz", icon:"grid" },
+      { label:"متجر", tag:"store", url:"https://discord.gg/jza", icon:"cart" },
+      { label:"سيرفر الديسكورد", tag:"discord", url:"https://discord.gg/3ziz", icon:"discord" }
+    ],
+    socials: [
+      { label:"Discord", url:"https://discord.gg/3ziz", icon:"discord" },
+    ],
+    projects: []
+  };
+ 
+  const hasCloudStorage = !!(window.storage && window.storage.get && window.storage.set);
+  const hasLocalStorage = (function(){
+    try{ const k='__az_test'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }
+    catch(e){ return false; }
+  })();
+  const LOCAL_PREFIX = 'az_site_';
+ 
+  async function storageGet(key, shared){
+    if(hasCloudStorage){
+      try{ const res = await window.storage.get(key, shared); return res ? res.value : null; }
+      catch(e){ return null; }
+    }
+    if(hasLocalStorage){ return localStorage.getItem(LOCAL_PREFIX + key); }
+    return null;
+  }
+  async function storageSet(key, value, shared){
+    if(hasCloudStorage){
+      try{ await window.storage.set(key, value, shared); return true; }
+      catch(e){ return false; }
+    }
+    if(hasLocalStorage){
+      try{ localStorage.setItem(LOCAL_PREFIX + key, value); return true; }
+      catch(e){ return false; }
+    }
+    return false;
+  }
+ 
+  const icons = {
+    grid: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>',
+    cart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>',
+    discord: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.7A17 17 0 0 0 15.8 3l-.4.8a13 13 0 0 1 3.7 1.5c-1.5-.8-3.2-1.3-5-1.5-1.8-.2-3.7 0-5.5.6-.4.1-.9.3-1.3.5l-.4-.8A17 17 0 0 0 3.7 4.7C1.6 8 1 11.3 1.2 14.6a17 17 0 0 0 5.2 2.6l.7-1.1a11 11 0 0 1-1.7-.8l.4-.3c3.3 1.5 6.9 1.5 10.2 0l.4.3a11 11 0 0 1-1.7.8l.7 1.1a17 17 0 0 0 5.2-2.6C23 11.1 22.2 7.8 20.3 4.7zM8.7 13.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg>',
+    circle: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>',
+    github: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.6s.9-.3 2.9 1a10 10 0 0 1 5.2 0c2-1.3 2.9-1 2.9-1a3.6 3.6 0 0 1 .1 2.6 3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v2.9c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>',
+    x: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3.2l-7 8 8.2 10h-6.4l-5-6.5L4.5 21H1.3l7.5-8.6L1 3h6.5l4.5 6 5.5-6z"/></svg>',
+    link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1-1"/></svg>',
+    proj: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>'
+  };
+ 
+  async function loadState(){
+    const raw = await storageGet('site-data', true);
+    if(raw){
+      try{ state = Object.assign(state, JSON.parse(raw)); }
+      catch(e){ /* corrupted or empty, keep defaults */ }
+    }
+  }
+ 
+  async function saveState(){
+    const ok = await storageSet('site-data', JSON.stringify(state), true);
+    if(!ok) console.error('storage save failed');
+    return ok;
+  }
+ 
+  async function bumpVisits(){
+    const raw = await storageGet('visit-count', true);
+    let count = raw ? (parseInt(raw,10) || 0) : 0;
+    count += 1;
+    await storageSet('visit-count', String(count), true);
+    document.getElementById('visitCount').textContent = count.toLocaleString('ar');
+  }
+ 
+  function render(){
+    document.getElementById('roleText').textContent = state.bio;
+ 
+    const linksEl = document.getElementById('links');
+    linksEl.innerHTML = '';
+    if(state.links.length === 0){
+      linksEl.innerHTML = '<div class="empty-hint">لايوجد رابط</div>';
+    } else {
+      state.links.forEach((l, i)=>{
+        const a = document.createElement('a');
+        a.className = 'link-row';
+        a.href = l.url || '#';
+        a.target = '_blank'; a.rel = 'noopener';
+        a.innerHTML = `<span class="ic">${icons[l.icon] || icons.link}</span>${l.label}<span class="meta">${l.tag||''}</span>`;
+        if(isAdmin){
+          const del = document.createElement('span');
+          del.className = 'del'; del.textContent = '×';
+          del.onclick = (e)=>{ e.preventDefault(); e.stopPropagation(); state.links.splice(i,1); saveState(); render(); };
+          a.appendChild(del);
+        }
+        linksEl.appendChild(a);
+      });
+    }
+ 
+    const socEl = document.getElementById('socials');
+    socEl.innerHTML = '';
+    state.socials.forEach((s,i)=>{
+      const a = document.createElement('a');
+      a.href = s.url || '#'; a.target = '_blank'; a.rel = 'noopener'; a.title = s.label;
+      a.innerHTML = icons[s.icon] || icons.link;
+      if(isAdmin){
+        const del = document.createElement('span');
+        del.className = 'del'; del.textContent = '×';
+        del.onclick = (e)=>{ e.preventDefault(); e.stopPropagation(); state.socials.splice(i,1); saveState(); render(); };
+        a.appendChild(del);
+      }
+      socEl.appendChild(a);
+    });
+ 
+    const projEl = document.getElementById('projGrid');
+    projEl.innerHTML = '';
+    if(state.projects.length === 0){
+      projEl.innerHTML = '<div class="proj-empty">لايوجد مشاريع</div>';
+    } else {
+      state.projects.forEach((p,i)=>{
+        const a = document.createElement('a');
+        a.className = 'proj-card';
+        a.href = p.url || '#'; a.target = '_blank'; a.rel = 'noopener';
+        const thumb = p.image ? `<img class="thumb" src="${p.image}" alt="">` : '';
+        const tag = p.image ? '' : `<span class="tag">${icons.proj}</span>`;
+        a.innerHTML = `${thumb}${tag}<h3>${p.title}</h3><span class="desc">${p.desc||''}</span>`;
+        if(isAdmin){
+          const del = document.createElement('span');
+          del.className = 'del'; del.textContent = '×';
+          del.onclick = (e)=>{ e.preventDefault(); e.stopPropagation(); state.projects.splice(i,1); saveState(); render(); };
+          a.appendChild(del);
+        }
+        projEl.appendChild(a);
+      });
+    }
+  }
+ 
+  function flashSaved(){
+    const n = document.getElementById('saveNote');
+    n.style.display = 'block';
+    setTimeout(()=>{ n.style.display = 'none'; }, 1400);
+  }
+ 
+  document.getElementById('adminTrigger').onclick = ()=>{
+    if(isAdmin){
+      document.getElementById('bioInput').value = state.bio;
+      document.getElementById('adminOverlay').classList.add('show');
+    } else {
+      document.getElementById('pwInput').value = '';
+      document.getElementById('pwError').style.display = 'none';
+      document.getElementById('pwOverlay').classList.add('show');
+      setTimeout(()=>document.getElementById('pwInput').focus(), 50);
+    }
+  };
+  document.getElementById('pwCancel').onclick = ()=> document.getElementById('pwOverlay').classList.remove('show');
+  document.getElementById('pwSubmit').onclick = tryLogin;
+  document.getElementById('pwInput').addEventListener('keydown', e=>{ if(e.key === 'Enter') tryLogin(); });
+  function tryLogin(){
+    const val = document.getElementById('pwInput').value.trim().toLowerCase();
+    if(val === PASSWORD){
+      isAdmin = true;
+      startSession();
+      updateTriggerUI();
+      document.getElementById('pwOverlay').classList.remove('show');
+      document.getElementById('bioInput').value = state.bio;
+      document.getElementById('adminOverlay').classList.add('show');
+      render();
+    } else {
+      document.getElementById('pwError').style.display = 'block';
+    }
+  }
+  document.getElementById('closeAdmin').onclick = ()=> document.getElementById('adminOverlay').classList.remove('show');
+  document.getElementById('logoutBtn').onclick = ()=>{
+    document.getElementById('adminOverlay').classList.remove('show');
+    endSession();
+  };
+ 
+  document.getElementById('saveBio').onclick = ()=>{
+    state.bio = document.getElementById('bioInput').value.trim() || state.bio;
+    saveState(); render(); flashSaved();
+  };
+ 
+  document.getElementById('addLink').onclick = ()=>{
+    const label = document.getElementById('linkLabel').value.trim();
+    const tag = document.getElementById('linkTag').value.trim();
+    const url = document.getElementById('linkUrl').value.trim();
+    if(!label || !url) return;
+    state.links.push({ label, tag, url, icon:'link' });
+    document.getElementById('linkLabel').value = '';
+    document.getElementById('linkTag').value = '';
+    document.getElementById('linkUrl').value = '';
+    saveState(); render(); flashSaved();
+  };
+ 
+  document.getElementById('addSocial').onclick = ()=>{
+    const label = document.getElementById('socLabel').value.trim();
+    const url = document.getElementById('socUrl').value.trim();
+    if(!label || !url) return;
+    state.socials.push({ label, url, icon:'link' });
+    document.getElementById('socLabel').value = '';
+    document.getElementById('socUrl').value = '';
+    saveState(); render(); flashSaved();
+  };
+ 
+  let pendingProjImage = null;
+ 
+  function resizeImage(file){
+    return new Promise((resolve, reject)=>{
+      const reader = new FileReader();
+      reader.onload = (e)=>{
+        const img = new Image();
+        img.onload = ()=>{
+          const maxW = 640;
+          const scale = Math.min(1, maxW / img.width);
+          const w = Math.max(1, Math.round(img.width * scale));
+          const h = Math.max(1, Math.round(img.height * scale));
+          const canvas = document.createElement('canvas');
+          canvas.width = w; canvas.height = h;
+          canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+          resolve(canvas.toDataURL('image/jpeg', 0.72));
+        };
+        img.onerror = reject;
+        img.src = e.target.result;
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  }
+ 
+  document.getElementById('projImage').addEventListener('change', async (e)=>{
+    const file = e.target.files[0];
+    if(!file) return;
+    const errEl = document.getElementById('projError');
+    errEl.style.display = 'none';
+    try{
+      pendingProjImage = await resizeImage(file);
+      const prev = document.getElementById('projImagePreview');
+      prev.src = pendingProjImage;
+      prev.style.display = 'block';
+      document.getElementById('projImageText').textContent = 'تم اختيار الصورة — اضغط لتغييرها';
+    }catch(err){
+      errEl.textContent = 'ما قدرت أفتح الصورة، جرب صورة ثانية';
+      errEl.style.display = 'block';
+    }
+  });
+ 
+  document.getElementById('addProj').onclick = async ()=>{
+    const title = document.getElementById('projTitle').value.trim();
+    const desc = document.getElementById('projDesc').value.trim();
+    const url = document.getElementById('projUrl').value.trim();
+    const errEl = document.getElementById('projError');
+    errEl.style.display = 'none';
+    if(!title) return;
+ 
+    const project = { title, desc, url };
+    if(pendingProjImage) project.image = pendingProjImage;
+    state.projects.push(project);
+ 
+    const ok = await saveState();
+    if(!ok){
+      state.projects.pop();
+      errEl.textContent = 'ما قدرنا نحفظ المشروع — جرب صورة أصغر أو بدون صورة';
+      errEl.style.display = 'block';
+      return;
+    }
+ 
+    document.getElementById('projTitle').value = '';
+    document.getElementById('projDesc').value = '';
+    document.getElementById('projUrl').value = '';
+    document.getElementById('projImage').value = '';
+    document.getElementById('projImagePreview').style.display = 'none';
+    document.getElementById('projImageText').textContent = 'إضافة صورة للمشروع (اختياري)';
+    pendingProjImage = null;
+ 
+    render(); flashSaved();
+  };
+ 
+  (async function init(){
+    updateTriggerUI();
+    await loadState();
+    render();
+    await bumpVisits();
+  })();
+})();
+</script>
+ 
 </body>
 </html>
+ 
